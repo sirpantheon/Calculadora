@@ -1,0 +1,67 @@
+.kz-btn {
+    width: 96px;
+    margin: 4px;
+    background-color: #ffffff;
+}
+.kz-btn:hover {
+    color: #cceaf3;
+    background-color: #ffffff;
+    border-color: #040830;
+}
+.kz-input-text {
+    margin-top: 3px;
+    width:95%;
+	margin-left:6px
+}
+.kz-pad-20 {
+	padding: 25px;
+}
+.col-xs-3, .col-xs-9 {
+	padding: 0px;
+}
+#painel-principal{
+    width: 445px;
+}
+#display{
+    width: 300px;
+}
+.bg-primary {
+    background-color: #9fb3c9 !important;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: rgb(0, 0, 0);
+}
+.btn-warning:hover {
+    color: #000000;
+    background-color: #cceaf3;
+    border-color: #080c3a;
+}
+.btn-warning {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #999baf;
+}
+.btn-success:hover {
+    color: #000000;
+    background-color: #cceaf3;
+    border-color: #080c3a;
+}
+.btn-success {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #999baf;
+}
+.btn-danger:hover {
+    color: #000000;
+    background-color: #cceaf3;
+    border-color: #080c3a;
+}
+.btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #492b52;
+    border-color: #180083;
+}
