@@ -9,10 +9,10 @@ import { CalculadoraService } from '../services';
 })
 export class CalculadoraComponent implements OnInit {
 
-  private numero1: string;
-  private numero2: string;
-  private resultado: number;
-  private operacao: string;
+  private numero1: string = '0';
+  private numero2: string = '0';
+  private resultado: number= 0;
+  private operacao: string = '';
 
   constructor(private CalculadoraService: CalculadoraService) { }
 
@@ -22,14 +22,14 @@ export class CalculadoraComponent implements OnInit {
   }
 
   limpar(): void{
-    this.numero1 = '0';
-    this.numero2 = '0';
+    this.numero1 = '';
+    this.numero2 = '';
     this.resultado = 0;
     this.operacao = '';
   }
 
   adicionarNumero(numero:string):void{
-    if (this.operacao === null){
+    if (this.operacao === ''){
       this.numero1 = this.concatenarNumero(this.numero1,numero);
     }else{
       this.numero2 = this.concatenarNumero(this.numero2, numero);
@@ -37,7 +37,7 @@ export class CalculadoraComponent implements OnInit {
   }
 
   concatenarNumero(numAtual:string, numConcat:string):string{
-    if (numAtual === '0' || numAtual === null){
+    if (numAtual === '0' || numAtual === ''){
       numAtual='';
     }
     if(numConcat ==='.' && numAtual === '') {
@@ -51,25 +51,25 @@ export class CalculadoraComponent implements OnInit {
   }
 
   definirOperacao(operacao:string):void{
-    if(this.operacao === null){
+    if(this.operacao === ''){
       this.operacao = operacao;
       return;
     }
 
-    if(this.numero2 !== null){
+    if(this.numero2 !== ''){
       this.resultado = this.CalculadoraService.calcular(
         parseFloat(this.numero1),
         parseFloat(this.numero2),
         this.operacao);
       this.operacao = operacao;
       this.numero1 = this.resultado.toString();
-      this.numero2 = '0';
+      this.numero2 = '';
       this.resultado = 0;
     }
   }
 
   calcular():void{
-    if(this.numero2 === null){
+    if(this.numero2 === ''){
       return;
     }
 
@@ -80,10 +80,10 @@ export class CalculadoraComponent implements OnInit {
   }
 
   get display():string{
-    if( this.resultado !== null){
+    if( this.resultado !== 0){
       return this.resultado.toString();
     }
-    if (this .numero2 !== null){
+    if (this .numero2 !== ''){
       return this.numero2;
     }
     return this.numero1;

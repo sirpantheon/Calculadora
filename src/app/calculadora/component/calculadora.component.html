@@ -131,6 +131,7 @@
                 <button 
                   type="button" 
                   class="btn btn-default kz-btn" 
+                  (click)="adicionarNumero('0')"
                   id="btn0">0
                 </button>
               </div>
@@ -138,7 +139,7 @@
                 <button 
                   type="button" 
                   class="btn btn-default kz-btn" 
-                  (click)="definirOperacao('.')"
+                  (click)="adicionarNumero('.')"
                   id="btnDecimal">.
                 </button>
               </div>
@@ -146,6 +147,7 @@
                 <button 
                   type="button" 
                   class="btn btn-success kz-btn" 
+                  (click)="calcular()"
                   id="btnCalcular">=
                 </button>
               </div>
