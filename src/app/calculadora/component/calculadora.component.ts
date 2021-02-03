@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CalculadoraService } from '../services'
+import { CalculadoraService } from '../services';
 
 @Component({
   selector: 'app-calculadora',
@@ -14,25 +14,23 @@ export class CalculadoraComponent implements OnInit {
   private resultado: number;
   private operacao: string;
 
-  constructor(private CalculadoraService: CalculadoraService) { 
-    
-  }
+  constructor(private CalculadoraService: CalculadoraService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
 
-    this.limpar()
+    this.limpar();
   }
 
   limpar(): void{
     this.numero1 = '0';
-    this.numero2 = null;
-    this.resultado = null;
-    this.operacao = null;
+    this.numero2 = '0';
+    this.resultado = 0;
+    this.operacao = '';
   }
 
   adicionarNumero(numero:string):void{
     if (this.operacao === null){
-      this.numero1 = this.concatenarNumero(this.numeroq,numero);
+      this.numero1 = this.concatenarNumero(this.numero1,numero);
     }else{
       this.numero2 = this.concatenarNumero(this.numero2, numero);
     }
@@ -65,8 +63,8 @@ export class CalculadoraComponent implements OnInit {
         this.operacao);
       this.operacao = operacao;
       this.numero1 = this.resultado.toString();
-      this.numero2 = null;
-      this.resultado = null;
+      this.numero2 = '0';
+      this.resultado = 0;
     }
   }
 
@@ -90,7 +88,5 @@ export class CalculadoraComponent implements OnInit {
     }
     return this.numero1;
   }
-
-
 
 }

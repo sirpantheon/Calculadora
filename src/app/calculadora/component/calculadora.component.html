@@ -10,6 +10,7 @@
               <div class="col-xs-3">
                 <button 
                   type="button" 
+                  (click)="limpar()"
                   class="btn btn-danger kz-btn">C
                 </button>
               </div>
@@ -18,6 +19,7 @@
                   type="text" 
                   class="form-control text-right kz-input-text"
                   id="display" 
+                  [value]= "display"
                   name="display" 
                   readonly>
               </div>
@@ -27,6 +29,7 @@
                 <button 
                   type="button" 
                   class="btn btn-default kz-btn" 
+                  (click)="adicionarNumero('7')"
                   id="btn7">7
                 </button>
               </div>
@@ -34,13 +37,15 @@
                 <button 
                   type="button" 
                   class="btn btn-default kz-btn" 
+                  (click)="adicionarNumero('8')"
                   id="btn8">8
                 </button>
               </div>
               <div class="col-xs-3">
                 <button 
                   type="button" 
-                  class="btn btn-default kz-btn" 
+                  class="btn btn-default kz-btn"
+                  (click)="adicionarNumero('9')"
                   id="btn9">9
                 </button>
               </div>
@@ -48,6 +53,7 @@
                 <button 
                   type="button" 
                   class="btn btn-warning kz-btn" 
+                  (click)="definirOperacao('/')"
                   id="btnDivisao">/
                 </button>
               </div>
@@ -57,13 +63,15 @@
                 <button 
                   type="button" 
                   class="btn btn-default kz-btn" 
+                  (click)="adicionarNumero('4')"
                   id="btn4">4
                 </button>
               </div>
               <div class="col-xs-3">
                 <button 
                   type="button" 
-                  class="btn btn-default kz-btn" 
+                  class="btn btn-default kz-btn"
+                  (click)="adicionarNumero('5')"
                   id="btn5">5
                 </button>
               </div>
@@ -71,13 +79,15 @@
                 <button 
                   type="button" 
                   class="btn btn-default kz-btn" 
+                  (click)="adicionarNumero('6')"
                   id="btn6">6
                 </button>
               </div>
               <div class="col-xs-3">
                 <button 
                   type="button" 
-                  class="btn btn-warning kz-btn"  
+                  class="btn btn-warning kz-btn" 
+                  (click)="definirOperacao('*')" 
                   id="btnMIltiplicacao">*
                 </button>
               </div>
@@ -87,6 +97,7 @@
                 <button 
                   type="button" 
                   class="btn btn-default kz-btn" 
+                  (click)="adicionarNumero('1')"
                   id="btn1">1
                 </button>
               </div>
@@ -94,6 +105,7 @@
                 <button 
                   type="button" 
                   class="btn btn-default kz-btn" 
+                  (click)="adicionarNumero('2')"
                   id="btn2">2
                 </button>
               </div>
@@ -101,6 +113,7 @@
                 <button 
                   type="button" 
                   class="btn btn-default kz-btn" 
+                  (click)="adicionarNumero('3')"
                   id="btn3">3
                 </button>
               </div>
@@ -108,6 +121,7 @@
                 <button 
                   type="button" 
                   class="btn btn-warning kz-btn" 
+                  (click)="definirOperacao('-')"
                   id="btnSubtracao">-
                 </button>
               </div>
@@ -124,6 +138,7 @@
                 <button 
                   type="button" 
                   class="btn btn-default kz-btn" 
+                  (click)="definirOperacao('.')"
                   id="btnDecimal">.
                 </button>
               </div>
@@ -138,6 +153,7 @@
                 <button 
                   type="button" 
                   class="btn btn-warning kz-btn" 
+                  (click)="definirOperacao('+')"
                   id="btnSoma">+
                 </button>
               </div>
